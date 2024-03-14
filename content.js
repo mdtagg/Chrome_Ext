@@ -1,22 +1,26 @@
-// console.log(window.localStorage)
-// localStorage.setItem("peer","https://www.google.com/")
-// console.log(localStorage.getItem("peer"))
 
+window.addEventListener("load",() => {
+    const test = localStorage.getItem("peer")
+    if(test) addLink(test);
+})
 const partnerButton = document.querySelector(".partner")
-const input = document.querySelector(".partner-input")
 
 partnerButton.addEventListener("click",(e) => {
+    const input = document.querySelector(".partner-input")
     const url = input.value
-    console.log(url)
-    if(url) addLink(url);
+    if(url) {
+        localStorage.setItem("peer",url)
+        addLink(url);
+    }
 })
 
 function addLink(url) {
-    // localStorage.setItem("partner",url)
+    
     const container = document.querySelector(".container")
     const newLink = document.createElement("a")
     newLink.textContent = "Partner"
     newLink.setAttribute("href",url)
+    newLink.setAttribute("target","_blank")
     container.appendChild(newLink)
 }
 
@@ -31,6 +35,7 @@ connecting js file to run (content script in manifest.json... docs)
 manifest json file 
 iframe not working (cors and x frame denial)
 calendar data not working (cors)
+why input element and dom manip works in the popup html file but not in the popup itself
 
 const iFrame = document.createElement("iframe")
 iFrame.setAttribute("class", "ourIFrame")
