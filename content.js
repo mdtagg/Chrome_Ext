@@ -3,7 +3,7 @@ window.addEventListener("load",() => {
     const test = localStorage.getItem("peer")
     if(test) addLink(test);
 })
-const partnerButton = document.querySelector(".partner")
+const partnerButton = document.querySelector(".partner-button")
 
 partnerButton.addEventListener("click",(e) => {
     const input = document.querySelector(".partner-input")
