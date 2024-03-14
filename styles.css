@@ -1,0 +1,50 @@
+
+
+body {
+    background-image: url(./assets/Yellow\ Bolts.jpeg);
+}
+
+a {
+    text-decoration: none;
+    color:black;
+    font-size:5rem;
+    /* padding:.5rem;
+    margin:.5rem; */
+    font-weight:600;
+    transform: scale(1);
+}
+
+a:hover {
+    transition:all .5s ease-out;
+    transform:scale(1.25);
+}
+
+.main-container {
+    display:flex;
+    flex-direction:column;
+    height:400px;
+    width:400px;
+    gap:3rem;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1rem;
+}
+
+.partner-container {
+    display:flex;
+    justify-content: center;
+    gap:1rem;
+}
+
+.juniorLink {
+    color:black;
+}
+
+.runwayLink {
+    color:black;
+}
