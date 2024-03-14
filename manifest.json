@@ -1,10 +1,17 @@
 {
-    "manifest_version": 1,
-    "name": "Mike T Zack B",
+    "manifest_version": 3,
+    "name": "Mike T Zach B",
     "description": "Base Level Extension",
     "version": "1.0",
     "action": {
-      "default_popup": "hello.html",
-      "default_icon": "hello_extensions.png"
-    }
-  }
+      "default_popup": "index.html",
+      "default_icon": "./assets/portal.png"
+    },
+    "permissions": ["activeTab"],
+      "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*"],
+          "js": ["content.js"]
+        }
+      ]
+}
