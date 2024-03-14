@@ -15,13 +15,29 @@ partnerButton.addEventListener("click",(e) => {
 })
 
 function addLink(url) {
-    
+
     const container = document.querySelector(".container")
+    
+    const linkContainer = document.createElement("div")
     const newLink = document.createElement("a")
+    const deleteButton = document.createElement("button")
+    deleteButton.addEventListener("click",() => {
+        localStorage.clear()
+        container.removeChild(linkContainer)
+    })
+    deleteButton.setAttribute("id","deleteButton")
+    deleteButton.textContent = "X"
+
+    linkContainer.setAttribute("id","linkContainer")
+
     newLink.textContent = "Partner"
     newLink.setAttribute("href",url)
     newLink.setAttribute("target","_blank")
-    container.appendChild(newLink)
+
+    linkContainer.appendChild(newLink)
+    linkContainer.appendChild(deleteButton)
+
+    container.appendChild(linkContainer)
 }
 
 
