@@ -6,16 +6,5 @@
     "action": {
       "default_popup": "index.html",
       "default_icon": "./assets/lightning-bolt-png-34117.png"
-    },
-    "permissions": ["activeTab"],
-      "content_scripts": [
-        {
-          "matches": ["http://*/*", "https://*/*"],
-          "js": ["content.js"]
-        }
-        ,
-        {
-            "matches":[]
-        }
-      ]
+    }
 }
