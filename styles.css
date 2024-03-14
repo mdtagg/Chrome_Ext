@@ -69,9 +69,30 @@ a:hover {
     border:1px solid black;
     background-color: red;
     color:white;
+    border-radius:5px;
 
     &:hover {
         background-color: darkred;
+    }
+}
+
+input {
+    width:200px;
+    height:30px;
+    border-radius:5px;
+    border:1px solid gray;
+    text-align: center;
+}
+
+.partner-button {
+    background:rgb(17, 184, 17);
+    color:white;
+    border:1px solid black;
+    padding:0 1rem;
+    border-radius:5px;
+
+    &:hover {
+        background-color: darkgreen;
     }
 }
 
