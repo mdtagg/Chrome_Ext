@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Mike T Zach B",
-    "description": "Base Level Extension",
+    "name": "Lightning Fast Links",
+    "description": "Get to where you want to be faster!",
     "version": "1.0",
     "action": {
       "default_popup": "index.html",

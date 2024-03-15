@@ -1,7 +1,16 @@
 
 window.addEventListener("load",() => {
-    const test = localStorage.getItem("peer")
-    if(test) addLink(test);
+    console.log(localStorage)
+    if(!localStorage.getItem("links")) localStorage.setItem("links",JSON.stringify([]))
+    else {
+        const links = JSON.parse(localStorage.getItem("links"))
+        console.log(links)
+        for(let link of links) {
+            addLink(link)
+        }
+    }
+    // const test = localStorage.getItem("links")
+    // if(test) addLink(test);
 })
 const partnerButton = document.querySelector(".partner-button")
 
@@ -9,22 +18,42 @@ partnerButton.addEventListener("click",(e) => {
     const input = document.querySelector(".partner-input")
     const url = input.value
     if(url) {
-        localStorage.setItem("peer",url)
-        addLink(url);
+        const oldArray = JSON.parse(localStorage.getItem("links"))
+        const newLinks = [...oldArray,url]
+        localStorage.setItem("links",JSON.stringify(newLinks))
+        addLink(url,newLinks.length - 1);
     }
 })
 
-function addLink(url) {
+
+function addLink(url,length) {
+    
+    // console.log(JSON.parse(localStorage.getItem("links")))
+
 
     const container = document.querySelector(".container")
-    
     const linkContainer = document.createElement("div")
     const newLink = document.createElement("a")
     const deleteButton = document.createElement("button")
-    deleteButton.addEventListener("click",() => {
-        localStorage.clear()
-        container.removeChild(linkContainer)
+    const partnerLinks = document.querySelector(".partner-links")
+
+    deleteButton.addEventListener("click",(e) => {
+        const {id} = e.target.dataset
+        const oldArray = JSON.parse(localStorage.getItem("links"))
+        oldArray.splice(id,1)
+        localStorage.setItem("links",JSON.stringify(oldArray))
+
+        console.log(localStorage)
+        partnerLinks.innerHTML = ""
+        for(let link of oldArray) {
+            addLink(link)
+        }
+        // localStorage.clear()
+
+        // console.log(container.ch)
+        // container.removeChild(linkContainer)
     })
+    deleteButton.setAttribute("data-id",length)
     deleteButton.setAttribute("id","deleteButton")
     deleteButton.textContent = "X"
 
@@ -37,7 +66,7 @@ function addLink(url) {
     linkContainer.appendChild(newLink)
     linkContainer.appendChild(deleteButton)
 
-    container.appendChild(linkContainer)
+    partnerLinks.appendChild(linkContainer)
 }
 
 
