@@ -1,13 +1,25 @@
-
+* {
+    font-family: 'Poppins', sans-serif;
+}
 
 body {
-    background-image: url(./assets/Yellow\ Bolts.jpeg);
+  background-image: url(/images/light1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 40px;
+  margin: auto;
 }
 
 a {
     text-decoration: none;
-    color:black;
-    font-size:5rem;
+    color:antiquewhite;
+    font-size:3rem;
     font-weight:600;
     transform: scale(1);
 }
@@ -21,14 +33,16 @@ button {
 a:hover {
     transition:all .5s ease-out;
     transform:scale(1.25);
+    text-shadow: 0 0 50px rgba(250, 193, 149, 0.9);
 }
 
 .main-container {
     display:flex;
     flex-direction:column;
+    justify-content: center;
     height:400px;
     width:400px;
-    gap:3rem;
+    gap:2rem;
 }
 
 .container {
@@ -46,11 +60,12 @@ a:hover {
 }
 
 .juniorLink {
-    color:black;
+    color:antiquewhite;
+    
 }
 
 .runwayLink {
-    color:black;
+    color:antiquewhite;
 }
 
 #linkContainer {
@@ -64,13 +79,13 @@ a:hover {
     margin-top:10px;
     height:30px;
     width:40px;
-    border:1px solid black;
-    background-color: red;
-    color:white;
+    border:1px solid antiquewhite;
+    background-color: transparent;
+    color:antiquewhite;
     border-radius:5px;
 
     &:hover {
-        background-color: darkred;
+        background-color: rgba(218, 199, 162, 0.416);
     }
 }
 
@@ -78,19 +93,33 @@ input {
     width:200px;
     height:30px;
     border-radius:5px;
-    border:1px solid gray;
+    border:1px solid antiquewhite;
     text-align: center;
+    background-color: transparent;
+    color: antiquewhite;
+    background-color: rgba(32, 27, 23, 0.355); 
+    color: white; 
 }
+
+.partner-container{
+    color:antiquewhite
+}
+    
 
 .partner-button {
     background:rgb(17, 184, 17);
-    color:white;
-    border:1px solid black;
+    color: antiquewhite;
+    background: transparent;
+    border:1px solid antiquewhite;
     padding:0 1rem;
     border-radius:5px;
+    position: relative;
+    cursor: pointer;
 
     &:hover {
-        background-color: darkgreen;
+        background-color: rgb(223, 106, 4);
+        transition: 1s;
+        
     }
 }
 
