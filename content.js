@@ -4,13 +4,10 @@ window.addEventListener("load",() => {
     if(!localStorage.getItem("links")) localStorage.setItem("links",JSON.stringify([]))
     else {
         const links = JSON.parse(localStorage.getItem("links"))
-        console.log(links)
         for(let link of links) {
             addLink(link)
         }
     }
-    // const test = localStorage.getItem("links")
-    // if(test) addLink(test);
 })
 const partnerButton = document.querySelector(".partner-button")
 
@@ -28,10 +25,6 @@ partnerButton.addEventListener("click",(e) => {
 
 function addLink(url,length) {
     
-    // console.log(JSON.parse(localStorage.getItem("links")))
-
-
-    const container = document.querySelector(".container")
     const linkContainer = document.createElement("div")
     const newLink = document.createElement("a")
     const deleteButton = document.createElement("button")
@@ -48,10 +41,6 @@ function addLink(url,length) {
         for(let link of oldArray) {
             addLink(link)
         }
-        // localStorage.clear()
-
-        // console.log(container.ch)
-        // container.removeChild(linkContainer)
     })
     deleteButton.setAttribute("data-id",length)
     deleteButton.setAttribute("id","deleteButton")
