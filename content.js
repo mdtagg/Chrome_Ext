@@ -59,7 +59,7 @@ function addLink(url,length) {
 
     linkContainer.setAttribute("id","linkContainer")
 
-    newLink.textContent = "Partner"
+    newLink.textContent = "ϟ Partner"
     newLink.setAttribute("href",url)
     newLink.setAttribute("target","_blank")
 
