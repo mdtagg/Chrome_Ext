@@ -1,7 +1,15 @@
 
+.abs {
+    position:absolute;
+    height: 600px;
+    background-color: purple;
+    opacity:.5;
+    width:400px;
+}
 
 body {
-    background-image: url(./assets/Yellow\ Bolts.jpeg);
+    margin:0;
+    width:400px;
 }
 
 a {
@@ -26,9 +34,9 @@ a:hover {
 .main-container {
     display:flex;
     flex-direction:column;
-    height:400px;
-    width:400px;
     gap:3rem;
+    background-image: url("assets/Untitled design (1).png");
+    padding:1rem;
 }
 
 .container {
