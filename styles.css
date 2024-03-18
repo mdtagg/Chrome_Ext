@@ -14,6 +14,19 @@ body {
   flex-wrap: wrap;
   border: 40px;
   margin: auto;
+{
+
+.abs {
+    position:absolute;
+    height: 600px;
+    background-color: purple;
+    opacity:.5;
+    width:400px;
+}
+
+body {
+    margin:0;
+    width:400px;
 }
 
 a {
@@ -43,6 +56,9 @@ a:hover {
     height:400px;
     width:400px;
     gap:2rem;
+    gap:3rem;
+    background-image: url("assets/Untitled design (1).png");
+    padding:1rem;
 }
 
 .container {
